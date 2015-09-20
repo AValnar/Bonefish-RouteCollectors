@@ -1,0 +1,23 @@
+{
+    "name": "av/bonefish-routecollectors",
+    "description": "Route collector package for Bonefish-Router",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=5.6.0",
+        "av/bonefish-router": "dev-master",
+        "av/bonefish-injection": "dev-master",
+        "av/bonefish-reflections": "^1.0",
+        "nette/reflection": "^2.3",
+        "symfony/finder": "^2.7"
+    },
+    "require-dev": {
+       "phpunit/phpunit": "^4.5"
+    },
+    "autoload": {
+      "psr-4": {
+        "Bonefish\\Router\\": ["src"],
+        "Bonefish\\Tests\\Router\\": ["tests"]
+      }
+    }
+}

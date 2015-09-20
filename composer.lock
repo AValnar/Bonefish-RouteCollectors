@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9ddef5c0562c5f6a284d09f75f5d38a1",
-    "content-hash": "a4ff5adc926c3c50d021c13f5b39ddaf",
+    "hash": "42d3e36905f12862ab415398d4dd74c3",
+    "content-hash": "fdf5043f439bf9bada324cf33920751a",
     "packages": [
         {
             "name": "av/bonefish-injection",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AValnar/Bonefish-Injection.git",
-                "reference": "bf9f1ada21c76a7d5173da82831ca739635ff4ee"
+                "reference": "d34ceda7efd624e5aa81e56703e07317aa7a8afd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AValnar/Bonefish-Injection/zipball/bf9f1ada21c76a7d5173da82831ca739635ff4ee",
-                "reference": "bf9f1ada21c76a7d5173da82831ca739635ff4ee",
+                "url": "https://api.github.com/repos/AValnar/Bonefish-Injection/zipball/d34ceda7efd624e5aa81e56703e07317aa7a8afd",
+                "reference": "d34ceda7efd624e5aa81e56703e07317aa7a8afd",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +40,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Dependency Injection Container",
-            "time": "2015-09-20 12:14:12"
+            "time": "2015-09-20 17:56:45"
         },
         {
             "name": "av/bonefish-reflections",
@@ -80,24 +80,21 @@
         },
         {
             "name": "av/bonefish-router",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AValnar/Bonefish-Router.git",
-                "reference": "84425c3ca4981a8cde175952f0b84cae2cd26e79"
+                "reference": "2d6fa3dbb89e7d77e5056d4b1600634f3271ed30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AValnar/Bonefish-Router/zipball/84425c3ca4981a8cde175952f0b84cae2cd26e79",
-                "reference": "84425c3ca4981a8cde175952f0b84cae2cd26e79",
+                "url": "https://api.github.com/repos/AValnar/Bonefish-Router/zipball/2d6fa3dbb89e7d77e5056d4b1600634f3271ed30",
+                "reference": "2d6fa3dbb89e7d77e5056d4b1600634f3271ed30",
                 "shasum": ""
             },
             "require": {
-                "av/bonefish-injection": "dev-master",
                 "nikic/fast-route": "^0.6",
-                "php": ">=5.6.0",
-                "symfony/finder": "^2.7",
-                "symfony/http-foundation": "^2.7"
+                "php": ">=5.6.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.5"
@@ -115,7 +112,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Routing package for Bonefish",
-            "time": "2015-09-20 12:15:07"
+            "time": "2015-09-20 17:42:35"
         },
         {
             "name": "av/bonefish-traits",
@@ -682,59 +679,6 @@
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
             "time": "2015-08-26 17:56:37"
-        },
-        {
-            "name": "symfony/http-foundation",
-            "version": "v2.7.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "7253c2041652353e71560bbd300d6256d170ddaf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/7253c2041652353e71560bbd300d6256d170ddaf",
-                "reference": "7253c2041652353e71560bbd300d6256d170ddaf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4",
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\HttpFoundation\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony HttpFoundation Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-08-27 06:45:45"
         },
         {
             "name": "symfony/options-resolver",
@@ -1746,10 +1690,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "av/bonefish-router": 20,
-        "av/bonefish-injection": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

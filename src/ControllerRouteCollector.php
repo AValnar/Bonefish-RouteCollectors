@@ -22,6 +22,7 @@
 namespace Bonefish\RouteCollectors;
 
 
+use AValnar\FileToClassMapper\Mapper;
 use Bonefish\Injection\Container\ContainerInterface;
 use Bonefish\Injection\LazyObject;
 use Bonefish\Reflection\Meta\MethodMeta;
@@ -31,17 +32,15 @@ use Bonefish\Router\Route\Route;
 use Bonefish\Router\Route\RouteCallbackDTO;
 use Bonefish\Router\Route\RouteCallbackDTOInterface;
 use Bonefish\Router\Route\RouteInterface;
-use Nette\Reflection\AnnotationsParser;
-use Symfony\Component\Finder\Finder;
-use Symfony\Component\Finder\SplFileInfo;
+
 
 final class ControllerRouteCollector implements RouteCollector
 {
 
     /**
-     * @var Finder
+     * @var Mapper
      */
-    protected $finder;
+    protected $mapper;
 
     /**
      * @var string
@@ -67,21 +66,21 @@ final class ControllerRouteCollector implements RouteCollector
     const DEFAULT_HTTP_METHOD = 'GET';
 
     /**
-     * @param Finder $finder
+     * @param Mapper $mapper
      * @param ReflectionService $reflectionService
      * @param ContainerInterface $container
      * @param string $packagesPath
      * @param string $vendorPath
      */
     public function __construct(
-        Finder $finder,
+        Mapper $mapper,
         ReflectionService $reflectionService,
         ContainerInterface $container,
         $packagesPath,
         $vendorPath
     )
     {
-        $this->finder = $finder;
+        $this->mapper = $mapper;
         $this->packagesPath = $packagesPath;
         $this->vendorPath = $vendorPath;
         $this->reflectionService = $reflectionService;
@@ -130,27 +129,12 @@ final class ControllerRouteCollector implements RouteCollector
 
     protected function collectControllers()
     {
-        $controllers = [];
-
         $packagesPath = $this->packagesPath;
         $vendorPath = $this->vendorPath;
 
-        $this->finder->files()
-            ->ignoreUnreadableDirs()
-            ->in($packagesPath)
-            ->in($vendorPath)
-            ->exclude('/tests/i')
-            ->path('/controller/i')
-            ->name('*Controller.php');
+        $this->mapper->configure(['/controller/i'], ['/tests/i'], ['*Controller.php']);
 
-        /** @var SplFileInfo $file */
-        foreach ($this->finder as $file) {
-            $parsed = AnnotationsParser::parsePhp(file_get_contents($file->getPathname()));
-            $class = array_keys($parsed);
-            $controllers[] = $class[0];
-        }
-
-        return $controllers;
+        return $this->mapper->createMap($packagesPath, $vendorPath);
     }
 
     /**

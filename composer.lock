@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "42d3e36905f12862ab415398d4dd74c3",
-    "content-hash": "fdf5043f439bf9bada324cf33920751a",
+    "hash": "e9d09cf8e8203a6bfc841901c691a28a",
+    "content-hash": "a5c83db2bfa19fad1b24512fc7c9d84e",
     "packages": [
         {
             "name": "av/bonefish-injection",
@@ -44,16 +44,16 @@
         },
         {
             "name": "av/bonefish-reflections",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AValnar/Bonefish-Reflections.git",
-                "reference": "a45afe552c2a6687ccd1822ccbeaa5ff44033600"
+                "reference": "959ee51777f7f27e9fd59c0cbd8433213747a7e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AValnar/Bonefish-Reflections/zipball/a45afe552c2a6687ccd1822ccbeaa5ff44033600",
-                "reference": "a45afe552c2a6687ccd1822ccbeaa5ff44033600",
+                "url": "https://api.github.com/repos/AValnar/Bonefish-Reflections/zipball/959ee51777f7f27e9fd59c0cbd8433213747a7e7",
+                "reference": "959ee51777f7f27e9fd59c0cbd8433213747a7e7",
                 "shasum": ""
             },
             "require": {
@@ -76,7 +76,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bonefish Reflection Service",
-            "time": "2015-09-12 12:56:37"
+            "time": "2015-09-20 18:09:00"
         },
         {
             "name": "av/bonefish-router",
@@ -179,6 +179,42 @@
             "notification-url": "https://packagist.org/downloads/",
             "description": "Simple Doctrine Annotations adapter for projects with silent auto loading",
             "time": "2015-09-12 12:54:22"
+        },
+        {
+            "name": "av/filetoclassmapper",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AValnar/FileToClassMapper.git",
+                "reference": "c28328fb0df67171e4c5a40c96aca9ed74533d12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AValnar/FileToClassMapper/zipball/c28328fb0df67171e4c5a40c96aca9ed74533d12",
+                "reference": "c28328fb0df67171e4c5a40c96aca9ed74533d12",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0",
+                "symfony/finder": "^2.7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AValnar\\FileToClassMapper\\": [
+                        "src"
+                    ],
+                    "AValnar\\Tests\\FileToClassMapper\\": [
+                        "tests"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Create file to classname maps for your projects",
+            "time": "2015-10-03 14:27:35"
         },
         {
             "name": "doctrine/annotations",
@@ -633,16 +669,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v2.7.4",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Finder.git",
-                "reference": "fff4b0c362640a0ab7355e2647b3d461608e9065"
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "8262ab605973afbb3ef74b945daabf086f58366f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/fff4b0c362640a0ab7355e2647b3d461608e9065",
-                "reference": "fff4b0c362640a0ab7355e2647b3d461608e9065",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/8262ab605973afbb3ef74b945daabf086f58366f",
+                "reference": "8262ab605973afbb3ef74b945daabf086f58366f",
                 "shasum": ""
             },
             "require": {
@@ -678,20 +714,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-26 17:56:37"
+            "time": "2015-09-19 19:59:23"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v2.7.4",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/OptionsResolver.git",
-                "reference": "0240d768d6dba7fd45c293fa90925291b577d2df"
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "75389f6f948edfdf0c0ebdbe00c4f84ab5d1a03e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/OptionsResolver/zipball/0240d768d6dba7fd45c293fa90925291b577d2df",
-                "reference": "0240d768d6dba7fd45c293fa90925291b577d2df",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/75389f6f948edfdf0c0ebdbe00c4f84ab5d1a03e",
+                "reference": "75389f6f948edfdf0c0ebdbe00c4f84ab5d1a03e",
                 "shasum": ""
             },
             "require": {
@@ -732,7 +768,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2015-08-24 07:13:45"
+            "time": "2015-09-25 06:59:16"
         }
     ],
     "packages-dev": [
@@ -1141,16 +1177,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.8",
+            "version": "4.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "521720279261e5b14799cf1bb895d4b55e516f26"
+                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/521720279261e5b14799cf1bb895d4b55e516f26",
-                "reference": "521720279261e5b14799cf1bb895d4b55e516f26",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/463163747474815c5ccd4ae12b5b355ec12158e8",
+                "reference": "463163747474815c5ccd4ae12b5b355ec12158e8",
                 "shasum": ""
             },
             "require": {
@@ -1209,20 +1245,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-19 05:44:37"
+            "time": "2015-10-01 09:14:30"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.7",
+            "version": "2.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a"
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/5e2645ad49d196e020b85598d7c97e482725786a",
-                "reference": "5e2645ad49d196e020b85598d7c97e482725786a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/ac8e7a3db35738d56ee9a76e78a4e03d97628983",
+                "reference": "ac8e7a3db35738d56ee9a76e78a4e03d97628983",
                 "shasum": ""
             },
             "require": {
@@ -1265,7 +1301,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-08-19 09:14:08"
+            "time": "2015-10-02 06:51:40"
         },
         {
             "name": "sebastian/comparator",
@@ -1640,16 +1676,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.4",
+            "version": "v2.7.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661"
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/2dc7b06c065df96cc686c66da2705e5e18aef661",
-                "reference": "2dc7b06c065df96cc686c66da2705e5e18aef661",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
+                "reference": "31cb2ad0155c95b88ee55fe12bc7ff92232c1770",
                 "shasum": ""
             },
             "require": {
@@ -1685,7 +1721,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-08-24 07:13:45"
+            "time": "2015-09-14 14:14:09"
         }
     ],
     "aliases": [],

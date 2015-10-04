@@ -24,10 +24,10 @@ namespace Bonefish\RouteCollectors;
 
 use AValnar\FileToClassMapper\Mapper;
 use Bonefish\Injection\Container\ContainerInterface;
-use Bonefish\Injection\LazyObject;
 use Bonefish\Reflection\Meta\MethodMeta;
 use Bonefish\Reflection\ReflectionService;
 use Bonefish\Router\Collectors\RouteCollector;
+use Bonefish\Router\LazyDTOCallback;
 use Bonefish\Router\Route\Route;
 use Bonefish\Router\Route\RouteCallbackDTO;
 use Bonefish\Router\Route\RouteCallbackDTOInterface;
@@ -182,8 +182,7 @@ final class ControllerRouteCollector implements RouteCollector
                     'controller' => $controller,
                     'action' => $action->getName(),
                     'dto' => new RouteCallbackDTO(
-                            [new LazyObject($controller, $this->container),
-                            $action->getName()],
+                            new LazyDTOCallback($controller, $action->getName()),
                             $parameters
                     )
                 ];

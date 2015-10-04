@@ -24,7 +24,6 @@ namespace Bonefish\RouteCollectors;
 
 use AValnar\FileToClassMapper\Mapper;
 use Bonefish\Injection\Container\ContainerInterface;
-use Bonefish\Injection\LazyObject;
 use Bonefish\Reflection\Meta\MethodMeta;
 use Bonefish\Reflection\ReflectionService;
 use Bonefish\RouteCollectors\Annotations\Delete;
@@ -34,6 +33,7 @@ use Bonefish\RouteCollectors\Annotations\Post;
 use Bonefish\RouteCollectors\Annotations\Put;
 use Bonefish\RouteCollectors\Annotations\Resource;
 use Bonefish\Router\Collectors\RouteCollector;
+use Bonefish\Router\LazyDTOCallback;
 use Bonefish\Router\Route\Route;
 use Bonefish\Router\Route\RouteCallbackDTO;
 use Bonefish\Router\Route\RouteCallbackDTOInterface;
@@ -152,7 +152,7 @@ final class RestRouteCollector implements RouteCollector
 
         $classMeta = $this->reflectionService->getClassMetaReflection($resource);
 
-        if (!$classMeta->getAnnotation(Resource::class)) {
+        if ($classMeta->getAnnotation(Resource::class) === false) {
             return [];
         }
 
@@ -218,7 +218,7 @@ final class RestRouteCollector implements RouteCollector
                     'resource' => $resource,
                     'action' => $action,
                     'dto' => new RouteCallbackDTO(
-                        [new LazyObject($resource, $this->container), $action->getName()],
+                        new LazyDTOCallback($resource, $action->getName()),
                         $parameters
                     )
                 ];

@@ -25,13 +25,13 @@ namespace Bonefish\RouteCollectors\Annotations;
 class Resource
 {
     /**
-     * @var array
+     * @var string
      */
     protected $path;
 
     public function __construct($path = null)
     {
-        $this->path = $path;
+        $this->path = is_array($path) ? array_pop($path) : $path;
     }
 
     /**

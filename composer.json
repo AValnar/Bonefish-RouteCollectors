@@ -5,7 +5,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.6.0",
-        "av/bonefish-router": "^1.0",
+        "av/bonefish-router": "^1.0 | ^2.0",
         "av/bonefish-injection": "^1.0",
         "av/bonefish-reflections": "^1.0",
         "av/filetoclassmapper": "^1.1"
